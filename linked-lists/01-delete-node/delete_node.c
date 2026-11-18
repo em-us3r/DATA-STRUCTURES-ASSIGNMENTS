@@ -13,7 +13,7 @@ void insert(int value) {
     struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
 
     if (newNode == NULL) {
-        printf("Memory allocation failed.\\n");
+        printf("Memory allocation failed.\n");
         return;
     }
 
@@ -39,7 +39,7 @@ int deleteNode(int value) {
 
     // Check whether the linked list is empty
     if (head == NULL) {
-        printf("Linked list is empty.\\n");
+        printf("Linked list is empty.\n");
         return -1;
     }
 
@@ -54,7 +54,7 @@ int deleteNode(int value) {
 
     // Check whether the value exists
     if (current == NULL) {
-        printf("Element not found in the linked list.\\n");
+        printf("Element not found in the linked list.\n");
         return -1;
     }
 
@@ -67,7 +67,7 @@ int deleteNode(int value) {
 
     free(current);
 
-    printf("Node containing %d deleted successfully.\\n", value);
+    printf("Node containing %d deleted successfully.\n", value);
 
     return 0;
 }
@@ -76,7 +76,7 @@ int deleteNode(int value) {
 void display() {
 
     if (head == NULL) {
-        printf("Linked list is empty.\\n");
+        printf("Linked list is empty.\n");
         return;
     }
 
@@ -89,7 +89,7 @@ void display() {
         current = current->next;
     }
 
-    printf("NULL\\n");
+    printf("NULL\n");
 }
 
 // Function to release all allocated memory
@@ -114,12 +114,12 @@ int main() {
     insert(40);
     insert(50);
 
-    printf("Before deletion:\\n");
+    printf("Before deletion:\n");
     display();
 
     deleteNode(30);
 
-    printf("\\nAfter deletion:\\n");
+    printf("\nAfter deletion:\n");
     display();
 
     freeList();

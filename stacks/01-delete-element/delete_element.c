@@ -8,7 +8,7 @@ int top = -1;
 // Function to insert an element
 void push(int value) {
     if (top == SIZE - 1) {
-        printf("Stack is full.\\n");
+        printf("Stack is full.\n");
         return;
     }
 
@@ -21,7 +21,7 @@ int deleteElement(int value) {
 
     // Check whether the stack is empty
     if (top == -1) {
-        printf("Stack is empty.\\n");
+        printf("Stack is empty.\n");
         return -1;
     }
 
@@ -37,7 +37,7 @@ int deleteElement(int value) {
 
     // Check whether the element exists
     if (position == -1) {
-        printf("Element not found in the stack.\\n");
+        printf("Element not found in the stack.\n");
         return -1;
     }
 
@@ -48,7 +48,7 @@ int deleteElement(int value) {
 
     top--;
 
-    printf("Element %d deleted successfully.\\n", value);
+    printf("Element %d deleted successfully.\n", value);
 
     return 0;
 }
@@ -57,7 +57,7 @@ int deleteElement(int value) {
 void display() {
 
     if (top == -1) {
-        printf("Stack is empty.\\n");
+        printf("Stack is empty.\n");
         return;
     }
 
@@ -67,7 +67,7 @@ void display() {
         printf("%d ", stack[i]);
     }
 
-    printf("\\n");
+    printf("\n");
 }
 
 // Main function
@@ -79,12 +79,12 @@ int main() {
     push(40);
     push(50);
 
-    printf("Before deletion:\\n");
+    printf("Before deletion:\n");
     display();
 
     deleteElement(30);
 
-    printf("\\nAfter deletion:\\n");
+    printf("\nAfter deletion:\n");
     display();
 
     return 0;
